@@ -1,0 +1,205 @@
+
+{% load static %}
+    
+   
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+    }
+    
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    nav ul li {
+        margin-left: 20px;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .hero {
+        background-image: url('hero-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 100px 0;
+        text-align: center;
+    }
+    
+    .hero .cta {
+        background-color: #ff6600;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .packages, .user-details, .payment {
+        padding: 50px 0;
+        text-align: center;
+    }
+    
+    .package-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .package {
+        border: 1px solid #ddd;
+        padding: 20px;
+        width: 200px;
+        border-radius: 5px;
+    }
+    
+    .package h3 {
+        margin: 0 0 10px;
+    }
+    
+    .package button {
+        background-color: #ff6600;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .package button:hover {
+        background-color: #e55b00;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    form label {
+        font-weight: bold;
+    }
+    
+    form input {
+        padding: 10px;
+        width: 100%;
+        max-width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    form button {
+        background-color: #ff6600;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    form button:hover {
+        background-color: #e55b00;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    footer .footer-links a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    
+    footer .contact-info, footer .social-media {
+        margin: 10px 0;
+    }
+    .logo {
+        background-image: url('logo.png');
+        /* Additional styling properties */
+    }
+    img {
+        width: 40px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50PX;
+    }
+    
+  </style>
+    <!-- Header -->
+    <body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>SUPERTEL</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'packages' %}">Packages</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stay Connected Anytime, Anywhere!</h1>
+            <p>Choose from a variety of data bundles and airtime packages.</p>
+            <a href="{% url 'packages' %}" class="cta">Buy Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy-policy">Privacy Policy</a>
+                <a href="#terms-of-service">Terms of Service</a>
+                <a href="#faqs">FAQs</a>
+            </div>
+            <div class="contact-info">
+                <p>Email: supertel@gmail.com</p>
+                <p>Phone: +125-728-394-750</p>
+                <p>Address: 1234 NAIROBI </p>
+            </div>
+            <div class="social-media">
+                <a href="#facebook"><img src="{% static 'images/fb.jpeg' %}" alt="Facebook"></a>
+                <a href="#twitter"><img src="{% static 'images/twit.jpeg' %}" alt="Twitter"></a>
+                <a href="#linkedin"><img src="{% static 'images/linkedin-icon.png' %}" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+    </body>

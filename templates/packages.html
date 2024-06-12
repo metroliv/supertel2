@@ -1,0 +1,196 @@
+{% load static %}
+    <link rel = "stylesheet " href = "{%static 'style2.css'%}">   
+<style>
+    /* style2.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.logo {
+    float: left;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Packages Section Styles */
+.packages {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.package {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.package h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.package p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.package button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.package button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.social-media img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+</style>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>SUPERTEL</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'packages' %}">Packages</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2>Select Your Package</h2>
+            <div class="package-grid">
+                <div class="package" data-package="Daily Data - 1GB - $1.99">
+                    <h3>Daily Data</h3>
+                    <p>1GB - 24 hours</p>
+                    <p>$1.99</p>
+                    <button onclick="selectPackage('Daily Data - 1GB - $1.99')">Buy Now</button>
+                </div>
+                <div class="package" data-package="Weekly Data - 5GB - $9.99">
+                    <h3>Weekly Data</h3>
+                    <p>5GB - 7 days</p>
+                    <p>$9.99</p>
+                    <button onclick="selectPackage('Weekly Data - 5GB - $9.99')">Buy Now</button>
+                </div>
+                <div class="package" data-package="Monthly Data - 20GB - $29.99">
+                    <h3>Monthly Data</h3>
+                    <p>20GB - 30 days</p>
+                    <p>$29.99</p>
+                    <button onclick="selectPackage('Monthly Data - 20GB - $29.99')">Buy Now</button>
+                </div>
+                <div class="package" data-package="$5 Airtime - $5.00">
+                    <h3>$5 Airtime</h3>
+                    <p>Talk time varies</p>
+                    <p>$5.00</p>
+                    <button onclick="selectPackage('$5 Airtime - $5.00')">Buy Now</button>
+                </div>
+                <div class="package" data-package="$10 Airtime - $10.00">
+                    <h3>$10 Airtime</h3>
+                    <p>Talk time varies</p>
+                    <p>$10.00</p>
+                    <button onclick="selectPackage('$10 Airtime - $10.00')">Buy Now</button>
+                </div>
+                <div class="package" data-package="$20 Airtime - $20.00">
+                    <h3>$20 Airtime</h3>
+                    <p>Talk time varies</p>
+                    <p>$20.00</p>
+                    <button onclick="selectPackage('$20 Airtime - $20.00')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy-policy">Privacy Policy</a>
+                <a href="#terms-of-service">Terms of Service</a>
+                <a href="#faqs">FAQs</a>
+            </div>
+            <div class="contact-info">
+                <p>Email: supertel@gmail.com</p>
+                <p>Phone: +125-758-538-836</p>
+                <p>Address: 1234 NAIROBI </p>
+            </div>
+            <div class="social-media">
+                <a href="#facebook"><img src="{% static 'images/fb.jpeg' %}" alt="Facebook"></a>
+                <a href="#twitter"><img src="{% static 'images/twit.jpeg' %}" alt="Twitter"></a>
+                <a href="#linkedin"><img src="{% static 'images/linkedin-icon.png' %}" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+
